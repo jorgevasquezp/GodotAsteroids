@@ -2,7 +2,6 @@
 
 [ext_resource path="res://Scripts/Ship.gd" type="Script" id=1]
 
-
 [node name="Ship" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
@@ -10,9 +9,9 @@ __meta__ = {
 "_edit_group_": true
 }
 max_speed = 5
-accel = 0.1
+accel = 1.1
 radial_max_speed = 1
-radial_accel = 0.1
+radial_accel = 0.05
 
 [node name="ShipShape" type="Polygon2D" parent="." index="0"]
 

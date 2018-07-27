@@ -7,6 +7,7 @@ export (float) var radial_accel
 
 var speed	
 var radial_speed
+var angle
 
 # class member variables go here, for example:
 # var a = 2
@@ -14,7 +15,8 @@ var radial_speed
 
 func _ready():
 	speed = 0
-	radial_speed = 0 
+	radial_speed = 0
+	angle = 0
 	
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
@@ -36,6 +38,9 @@ func _process(delta):
 	
 	speed = drag(speed,.9)
 	radial_speed = drag(radial_speed,.9)
+	
+	rotation += angle + radial_speed
+	position += Vector2( speed * sin( rotation ) , speed * cos ( rotation ) )
 	
 	print( str(speed) + "," + str(radial_speed) )
 #	# Called every frame. Delta is time since last frame.
