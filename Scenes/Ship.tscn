@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/Ship.gd" type="Script" id=1]
+
+
+[node name="Ship" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+max_speed = 5
+accel = 0.1
+radial_max_speed = 1
+radial_accel = 0.1
+
+[node name="ShipShape" type="Polygon2D" parent="." index="0"]
+
+polygon = PoolVector2Array( -10, -6, 0, 12, 10, -6 )
+uv = PoolVector2Array(  )
+color = Color( 1, 1, 1, 1 )
+vertex_colors = PoolColorArray(  )
+offset = Vector2( 0, 0 )
+antialiased = false
+texture = null
+texture_offset = Vector2( 0, 0 )
+texture_scale = Vector2( 1, 1 )
+texture_rotation_degrees = 0.0
+invert_enable = false
+invert_border = 100.0
+
+
